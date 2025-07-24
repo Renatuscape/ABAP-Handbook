@@ -1,5 +1,5 @@
 * Subforms are placed below the program's main body, usually declared with a "Subforms" or "Subroutines" header.
-* Forms are similar to methods, and can have in parameters (USING) and in/out parameters (CHANGING).
+* Forms are similar to functions (not part of a class), and can have in parameters (USING) and in/out parameters (CHANGING).
 * Forms are called using the PERFORM keyword, and must match the form's signature
 
 *--------------------------------------------------------------------------------------------
@@ -19,13 +19,18 @@ PERFORM multiple_parameters USING lt_table ls_structure lo_object.
 * Subforms
 *--------------------------------------------------------------------------------------------
 FORM parameter_form USING lt_table TYPE tt_table CHANGING ls_structure TYPE ts_structure.
-
-
+    " lt_table can be read, not changed
+    LOOP AT lt_table INTO DATA(ls_temp).
+        IF ls_temp-var1 EQ ls_structure-var1.
+            " ls_structure can be changed
+            ls_structure-var2 = ls_temp-var2.
+            EXIT.
+        ENDIF.
+    ENDLOOP.
 
 ENDFORM.
 
 * Forms can have multiple USING or CHANGING parameters. They are not separated by commas or keywords.
-
 FORM multiple_parameters
     USING lt_table TYPE tt_table ls_structure TYPE ts_structure lo_object TYPE objec_t.
 
