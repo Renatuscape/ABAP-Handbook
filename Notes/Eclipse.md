@@ -3,7 +3,7 @@ Notes on using Eclipse IDE for SAP/ABAP development.
 
 
 ### General Tips
-SAP GUI can be opened inside Eclipse through the menu Navigate -> Open SAP GUI (Ctrl+6).
+SAP GUI can be opened inside Eclipse through the menu Navigate > Open SAP GUI (Ctrl+6).
 * Transactions can be run as normal within Eclipse
 * Objects in Eclipse's SAP GUI-interface will be opened in Eclipse if possible
 
@@ -18,3 +18,15 @@ The System Library folder contains all the content of a solution organised by pa
 
 ### Coding in Eclipse
 When you fail to find an option in Eclipse, you can always choose Navigate > Open SAP GUI for Object, which will take you to the appropriate SAP GUI window with all the usual features.
+
+#### Shortcuts
+|Action|Shortcut|Note|
+|------|--------|----|
+|Check|Ctrl+F2|
+|Activate|Ctrl+F3|
+|Run|F8|Run as ABAP Application|
+|Run|Alt+F8|Run ABAP Dev object as Application in GUI|
+|Format code |Shift + F1    | Source Code > Format  |
+|Format block|Ctrl + Shift + F1 |
+|||
+
