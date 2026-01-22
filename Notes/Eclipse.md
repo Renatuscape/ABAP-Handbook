@@ -26,7 +26,7 @@ When you fail to find an option in Eclipse, you can always choose Navigate > Ope
 |Activate|Ctrl+F3|
 |Run|F8|Run as ABAP Application|
 |Run|Alt+F8|Run ABAP Dev object as Application in GUI|
-|Format code |Shift + F1    | Source Code > Format  |
-|Format block|Ctrl + Shift + F1 |
-|||
+|Format code |Shift + F1    | Source Code > Format|
+|Format block|Ctrl + Shift + F1|
+|Rename|ALt + Shift + R|Refactors a variable name everywhere in the code|
 
