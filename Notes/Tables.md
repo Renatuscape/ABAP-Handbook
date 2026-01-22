@@ -5,7 +5,7 @@ Tables are ABAP's equivalent to lists.
 
 *Internal tables* are temporary data structures in memory.
 
-### Internal tables
+### Internal Tables
 Internal tables come in three flavors:
 
 * Standard tables - like arrays, accessed by index, can have duplicates
@@ -14,7 +14,7 @@ Internal tables come in three flavors:
 
 Internal tables can be looped through and accessed by index or key.
 
-## Database tables
+### Database Tables
 They exist on the SAP database (HANA, Oracle, etc)
 
 * Persistent (survive program end, system restart)
@@ -22,11 +22,13 @@ They exist on the SAP database (HANA, Oracle, etc)
 * Need SQL statements (SELECT, INSERT, UPDATE, DELETE)
 * Can be huge (millions of records)
 
+## Table Operations
 ### Remove duplicate rows
 ```ABAP
 SORT lt_table BY field1 field2.
 DELETE ADJACENT DUPLICATES FROM lt_table COMPARING field1 field2.
 ```
+DELETE ADJACENT DUPLICATES requires the table to be sorted in order to work correctly. SORT does not require BY, but it is best practice to always sort on a key regardless.
 
 ### Check if line exists
 Modern ABAP syntax.
