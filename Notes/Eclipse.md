@@ -20,10 +20,11 @@ The System Library folder contains all the content of a solution organised by pa
 When you fail to find an option in Eclipse, you can always choose Navigate > Open SAP GUI for Object, which will take you to the appropriate SAP GUI window with all the usual features.
 
 #### Shortcuts
-|Action|Shortcut|Note|
+|<div style="width:150px">Action</div>| <div style="width:150px">Shortcut</div>|Note|
 |------|--------|----|
-|Check|Ctrl+F2|
-|Activate|Ctrl+F3|
+|Navigate to|F3|Go to definition of caret target. Unlike SAP GUI, double-clicking highlights the word, as in other IDEs and text editors|
+|Check|Ctrl+F2|Checks the code for errors without saving or activating|
+|Activate|Ctrl+F3|Saves and activates the code, making it ready to run|
 |Run|F8|Run as ABAP Application|
 |Run|Alt+F8|Run ABAP Dev object as Application in GUI|
 |Format code |Shift + F1    | Source Code > Format|
