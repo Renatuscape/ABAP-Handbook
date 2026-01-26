@@ -23,11 +23,11 @@ When you fail to find an option in Eclipse, you can always choose Navigate > Ope
 |<div style="width:150px">Action</div>| <div style="width:150px">Shortcut</div>|Note|
 |------|--------|----|
 |Navigate to|F3|Go to definition of caret target. Unlike SAP GUI, double-clicking highlights the word, as in other IDEs and text editors|
+|Format code |Shift + F1    | Formats all the code contained in the file|
+|Format block|Ctrl + Shift + F1| Formats a section of the code|
 |Check|Ctrl+F2|Checks the code for errors without saving or activating|
 |Activate|Ctrl+F3|Saves and activates the code, making it ready to run|
-|Run|F8|Run as ABAP Application|
-|Run|Alt+F8|Run ABAP Dev object as Application in GUI|
-|Format code |Shift + F1    | Source Code > Format|
-|Format block|Ctrl + Shift + F1|
+|Run application|F8|Run as ABAP Application|
+|Run object|Alt+F8|Run ABAP Dev object as Application in GUI|
 |Rename|ALt + Shift + R|Refactors a variable name everywhere in the code|
 
