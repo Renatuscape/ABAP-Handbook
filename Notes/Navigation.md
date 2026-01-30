@@ -12,7 +12,7 @@
 
 * Performance assistant can be used to find the table behind a list of values such as search help
 
-* If you know someone has worked on the same objects, check their transports (SE9)
+* If you know someone has worked on the same objects, check their transports (SE10)
 
 * If you are looking for a method or module, check the call stack
 
