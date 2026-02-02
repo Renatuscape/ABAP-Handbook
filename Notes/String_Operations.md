@@ -23,6 +23,38 @@ CONCATENATE
 ```
 Results in 'HelloWorld' being stored in lv_c.
 
+ABAP will generally delete trailing and leading commas and spaces unless told otherwise.
+
+In modern ABAP (7.40+), && can be used to create spaces.
+```ABAP
+CONCATENATE lv_a && lv_b && 'value.' INTO lv_c.
+```
+
+Backtick can also be used to preserve spaces.
+```ABAP
+CONCATENATE lv_a ` ` lv_b ` ` 'value.' INTO lv_c.
+```
+
+Alternately
+
+```ABAP
+CONCATENATE
+    lv_a
+    lv_b
+        INTO lv_c
+        SEPARATED BY space
+        RESPECTING BLANKS.
+```
+
+But many of these will still strugglle with leading or trailing commas and blanks. This can be solved with string templates.
+
+### String Templates
+The easiest way of combining variables and text into one string.
+
+```ABAP
+lv_string = |Hello, { lv_username }. Please respond by { lv_date }.|.
+```
+
 ### Substring
 Accessing a portion of the string.
 ```ABAP
