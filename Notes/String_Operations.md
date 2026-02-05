@@ -61,3 +61,9 @@ Accessing a portion of the string.
 lv_a = lv_c +5.
 ```
 Results in lv_a containing everything from lv_c from index 5 ('World').
+
+### Special characters
+|Symbol|Use|
+|------|---|
+|%|Any one character|
+|*|Any amount of any characters|
