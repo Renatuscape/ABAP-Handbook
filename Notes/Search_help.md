@@ -58,22 +58,20 @@ ENDIF.
 Building the search help consists of two parts. First, building a tables of the values available in your search, then passing those values to the function module F4IF_INT_TABLE_VALUE_REQUEST. Any table can be used for this, as long as the function module is passed the correct values. For this example, the list will be populated with positions from the t528t table.
 
 ```ABAP
-* Find positions
 SELECT * FROM t528t INTO CORRESPONDING FIELDS OF TABLE lt_t528t
     WHERE sprsl EQ sy-langu
         AND otype EQ 'S'
         AND begda LE sy-datum
         AND endda GE sy-datum.
 
-* Add further filtering using p_postxt if it is not initial
+* Add further filtering here using p_postxt if it is not initial
 ```
 
 All fields from the database table will be displayed in the search help window, and will appear as parameters that can be used in the search. You can move your values to a custom type, even a locally declared type, and pass that to the funtion module without fields that are superfluous for the search.
 
+When this code is called, the value help pop-up is displayed for the user.
 ```ABAP
 DATA: lt_return TYPE TABLE OF ddshretval.
-
-* Display the value help popup
 
 CALL FUNCTION 'F4IF_INT_TABLE_VALUE_REQUEST'
     EXPORTING
